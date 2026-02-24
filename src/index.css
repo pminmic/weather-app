@@ -1,0 +1,29 @@
+@import  "tailwindcss";
+
+@font-face{
+    font-family: "Nunito";
+    src: url('./assets/nunito-font.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 700;
+    font-display: swap;
+}
+
+@theme {
+    
+    /* Colors */
+    --color-pale-blue: #afeeee;
+    --color-soft-mint: #98edc2;
+    --color-aquamarine: #7fffd4;
+    --color-depth-blue: #608ca8;
+    --color-clover: #3ea054;
+    --color-dark-parakeet: #3fa950;
+    --color-fern: #667d26;
+    --color-pastel-mint: #98ff98;
+    --color-baby-blue: #89cff0;
+    --color-green-lime: #40a416;
+    --color-dark-forest: #244218;
+    --color-sum: #ffdd24;
+    
+    /*Font*/
+    --font-nunito: "Nunito", "sans";
+}
