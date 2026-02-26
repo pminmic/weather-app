@@ -2,8 +2,10 @@ import './About.css';
 
 const About = () => {
 
-    return(
-        <h1>About page</h1>
+    return (
+        <div className="page">
+            <h2>About page</h2>
+        </div>
     );
 }
 

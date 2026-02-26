@@ -3,6 +3,12 @@
 .navbar-section {
     border-bottom: 2px solid rgba(74, 74, 74, 0.8);
     height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    background-color: var(--background);
 }
 
 .navbar-section, .navbar-entries-container, .navbar-home {

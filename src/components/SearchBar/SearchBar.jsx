@@ -9,9 +9,9 @@ const SearchBar = ({ query, setQuery }) => {
 
     return(
         <form onSubmit={(e) => handleSubmit(e)} role="search"
-            className="flex items-center justify-center"
+            className="search-form"
         >
-            <label htmlFor="search-input" className="" >
+            <label htmlFor="search-input" className="search-input-label" >
                 ¡Busca el tiempo de tu ciudad!
             </label>
             <input 
@@ -21,12 +21,10 @@ const SearchBar = ({ query, setQuery }) => {
                 placeholder="¡Busca el tiempo de tu ciudad!"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="" />
+                className="search-input" />
             <button type="submit" aria-label="Buscar"
-                className="">
-                <FaSearch 
-                    className=""
-                />
+                className="search-button">
+                <FaSearch />
             </button>
         </form>
 
