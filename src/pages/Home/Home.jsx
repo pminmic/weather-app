@@ -1,17 +1,10 @@
-import { useState } from "react";
-import { readCSV } from "../../hooks/readCSV";
-import { getCityInfo } from "../../utils/getCityInfo";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import { useState } from 'react';
+import LiveSearch from '../../components/LiveSearch/LiveSearch';
 import './Home.css';
 
 const Home = () => {
 
-    const [query, setQuery] = useState("");
-
-    const csvData = readCSV("/codigos-esp.csv");
-
-    let data = getCityInfo(query, csvData);
-
+    const [code, setCode] = useState("");
 
     return (
         <div className="page home-page">
@@ -21,8 +14,7 @@ const Home = () => {
                     Aquí es donde irá el buscador y las principales datos del tiempo
                 </p>
             </div>
-            <SearchBar query={query} setQuery={setQuery} />
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <LiveSearch setCode={setCode} />
         </div>
     );
 

@@ -1,0 +1,24 @@
+.search-result {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    width: 40vw;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--background);
+}
+
+.search-result:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.search-result:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.search-result:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: none;
+}
