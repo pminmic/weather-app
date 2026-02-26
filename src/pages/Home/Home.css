@@ -26,3 +26,14 @@
     width: 75%;
     margin-bottom: 2rem;
 }
+
+@media (width <= 600px) {
+    .home-title {
+        font-size: 30px;
+    }
+
+    .home-description {
+        font-size: 14px;
+        width: 90%;
+    }
+}

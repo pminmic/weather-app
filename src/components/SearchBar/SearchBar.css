@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40vw;
+    width: 60vw;
     height: 3rem;
     border-radius: 5px;
 }
@@ -24,11 +24,19 @@
     font-size: 1.2rem;
 }
 
-.search-button {
-    background: none;
-    border: none;
-    color: black;
-    font-size: 1.2rem;
-    padding: 0 1rem;
-    cursor: pointer;
+@media (width <= 600px) {
+    .search-div {
+        width: 70vw;
+    }
+
+    .search-input {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (width <= 400px) {
+    .search-input {
+        font-size: 0.8rem;
+    }
 }
