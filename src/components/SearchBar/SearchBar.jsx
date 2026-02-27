@@ -1,14 +1,10 @@
-import { FaSearch } from "react-icons/fa";
 import './SearchBar.css';
 
 const SearchBar = ({ query, setQuery }) => {
 
 
-
     return (
-        <div
-            className="search-div"
-        >
+        <div className="search-div">
             <label htmlFor="search-input" className="search-input-label" >
                 ¡Busca el tiempo de tu ciudad!
             </label>
@@ -21,8 +17,6 @@ const SearchBar = ({ query, setQuery }) => {
                 onChange={(e) => setQuery(e.target.value)}
                 className="search-input" />
         </div>
-
-
     )
 };
 

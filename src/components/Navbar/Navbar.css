@@ -26,6 +26,11 @@
     justify-content: flex-start;
 }
 
+.navbar-home:hover {
+    scale: 1.05;
+    transition: scale 0.2s ease;
+}
+
 .navbar-icon-container {
     display: flex;
     align-items: center;
@@ -43,6 +48,8 @@
     width: 10rem;
     font-size: x-large;
 }
+
+/* Page links section */
 
 .navbar-entries-container {
     width: 100%;
@@ -66,6 +73,8 @@
     border-radius: 5px;
     transition: background-color 0.2s ease;
 }
+
+/* Responsive design */
 
 @media (width <= 600px) {
     .navbar-title {
