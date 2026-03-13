@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LiveSearch from '../../components/LiveSearch/LiveSearch';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -15,6 +16,15 @@ const Home = () => {
                 </p>
             </div>
             <LiveSearch setCode={setCode} />
+            {code !== "" ? (
+                <div className='links-to'>
+                    <Link to={`/hourly-report/${code}`}>Predicción por horas</Link>
+                    <Link to={`/daily-report/${code}`}>Predicción diaria</Link>
+                    <Link to={`/local-info/${code}`}>Información de la localidad</Link>
+                </div>
+            ) : (
+                <p>¡Introduce una localidad!</p>
+            )}
         </div>
     );
 
