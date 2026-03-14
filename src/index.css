@@ -1,8 +1,15 @@
 :root {
-    --background: rgba(0, 0, 0, 1);
+    --background-navbar: rgba(0, 0, 0, 1);
+    --color-light: #0f0f0f;
+    --background-grey: rgba(0, 0, 0, 0.9);
+    --color-dark: #f0f0f0;
+    --light-border: rgba(240, 240, 240, 0.2);
+    --card-background: rgba(15, 15, 15, 0.4);
+    --hover-light: rgb(200, 200, 200);
+    --hover-dark: rgba(74, 74, 74, 0.8);
 }
 
-@font-face{
+@font-face {
     font-family: "Nunito";
     src: url('./assets/nunito-font.woff2') format('woff2');
     font-style: normal;
@@ -12,8 +19,8 @@
 
 body {
     font-family: "Nunito", sans-serif;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    background-color: var(--background-grey);
+    color: var(--color-dark);
     width: 100%;
     height: auto;
     margin: 0;
