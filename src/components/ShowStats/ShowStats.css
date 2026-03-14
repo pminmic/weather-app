@@ -1,0 +1,22 @@
+.show-stats {
+    background-color: var(--card-background);
+    width: 15vw;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px var(--light-border) solid;
+}
+
+.label {
+    align-self: self-end;
+    font-size: 14px;
+}
+
+.value {
+    align-self: self-start;
+    font-size: 30px;
+    font-weight: 1000;
+}
