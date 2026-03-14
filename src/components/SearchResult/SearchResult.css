@@ -1,17 +1,17 @@
 /*Styles for the options of the live search component*/
 
 .search-result {
-    background-color: rgb(225, 225, 225);
-    color: black;
+    background-color: var(--color-dark);
+    color: var(--color-light);
     width: 60vw;
     max-width: 500px;
     padding: 5px 0;
     font-size: 1rem;
-    border-bottom: 1px solid var(--background);
+    border-bottom: 1px solid var(--background-navbar);
 }
 
 .search-result:hover {
-    background-color: rgb(200, 200, 200);
+    background-color: var(--hover-light);
     cursor: pointer;
 }
 

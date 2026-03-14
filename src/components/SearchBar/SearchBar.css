@@ -1,8 +1,8 @@
 /* Container for the search bar */
 
 .search-div {
-    border: 1px solid white;
-    background-color: white;
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
