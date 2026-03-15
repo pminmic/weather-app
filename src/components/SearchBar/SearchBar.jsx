@@ -1,6 +1,6 @@
 import './SearchBar.css';
 
-const SearchBar = ({ query, setQuery }) => {
+const SearchBar = ({ query, setQuery, setPage }) => {
 
 
     return (
@@ -14,7 +14,10 @@ const SearchBar = ({ query, setQuery }) => {
                 autoComplete="off"
                 placeholder="¡Busca el tiempo de tu ciudad!"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                    setQuery(e.target.value)
+                    setPage(0);
+                }}
                 className="search-input" />
         </div>
     )

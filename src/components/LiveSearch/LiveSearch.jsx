@@ -8,6 +8,7 @@ import "./LiveSearch.css";
 const LiveSearch = ({ setCode }) => {
 
     const [query, setQuery] = useState("");
+    const [page, setPage] = useState(0);
 
     const csvData = readCSV("/codigos-esp.csv");
 
@@ -18,11 +19,32 @@ const LiveSearch = ({ setCode }) => {
         setQuery(`${data.AUTO}, ${data.NAME}`);
     }
 
+    const showButtons = () => {
+        return (
+            <nav className="pagination">
+                <button className="prev-sig-but" onClick={() => setPage(page - 10)}>Prev.</button>
+                <button className="prev-sig-but" onClick={() => setPage(page + 10)}>Sig.</button>
+            </nav>
+        );
+    }
+
     return (
         <div className="live-search">
-            <SearchBar query={query} setQuery={setQuery}/>
+            <SearchBar query={query} setQuery={setQuery} setPage={setPage}/>
             <div className="result-container">
-                {data ? (data.slice(0, 10).map((n, i) => { return <SearchResult data={n} key={i} handleClick={handleClick}/> })) : (<empty></empty>)}
+                {data.length > 10 ? (
+                    data.slice(0 + page, 10 + page).map((n, i) => {
+                        return (
+                            <SearchResult data={n} key={i} handleClick={handleClick} />
+                        );
+
+                    })
+                ) : (
+                    data.map((n, i) => {
+                        return <SearchResult data={n} key={i} handleClick={handleClick} />
+                    }
+                    ))}
+                {data.slice(0+page, 10+page).length === 10 ? showButtons() : <></>}
             </div>
         </div>
     );

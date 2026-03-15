@@ -20,7 +20,7 @@
     border-top-right-radius: 5px;
 }
 
-.search-result:last-child {
+.search-result:last-of-type{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom: none;
